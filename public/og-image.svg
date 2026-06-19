@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040b22"/>
+      <stop offset="50%" style="stop-color:#0d1a3a"/>
+      <stop offset="100%" style="stop-color:#071347"/>
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#93c5fd"/>
+      <stop offset="100%" style="stop-color:#dbeafe"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+
+  <!-- Grid dots -->
+  <pattern id="dots" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+    <circle cx="1" cy="1" r="1" fill="#1d39a0" opacity="0.5"/>
+  </pattern>
+  <rect width="1200" height="630" fill="url(#dots)" opacity="0.4"/>
+
+  <!-- Glow blobs -->
+  <circle cx="900" cy="120" r="280" fill="#2549c0" opacity="0.12" filter="url(#glow)"/>
+  <circle cx="200" cy="520" r="200" fill="#fbbf24" opacity="0.06" filter="url(#glow)"/>
+
+  <!-- Logo icon (polyhedron) -->
+  <g transform="translate(85, 90)">
+    <polygon points="50,5 90,27 90,72 50,94 10,72 10,27" fill="none" stroke="#60a5fa" stroke-width="3"/>
+    <polygon points="50,5 70,38 50,48 30,38" fill="none" stroke="#60a5fa" stroke-width="3"/>
+    <line x1="50" y1="48" x2="50" y2="94" stroke="#60a5fa" stroke-width="3"/>
+    <line x1="10" y1="27" x2="30" y2="38" stroke="#60a5fa" stroke-width="3"/>
+    <line x1="90" y1="27" x2="70" y2="38" stroke="#60a5fa" stroke-width="3"/>
+    <circle cx="50" cy="49" r="8" fill="#fbbf24"/>
+  </g>
+
+  <!-- App name -->
+  <text x="210" y="148" font-family="Inter, Arial, sans-serif" font-size="52" font-weight="900" fill="#ffffff" letter-spacing="-1">CONTRI</text>
+  <text x="420" y="148" font-family="Inter, Arial, sans-serif" font-size="52" font-weight="900" fill="#60a5fa" letter-spacing="-1"> APP</text>
+
+  <!-- Divider -->
+  <rect x="85" y="168" width="480" height="3" rx="2" fill="#1d39a0"/>
+
+  <!-- Tagline -->
+  <text x="85" y="225" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700" fill="url(#textGrad)">Sistema ERP para Ecuador</text>
+  <text x="85" y="272" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="400" fill="#94a3b8">Facturación electrónica · Contabilidad · Inventario · RRHH</text>
+
+  <!-- Feature pills -->
+  <g transform="translate(85, 310)">
+    <!-- SRI -->
+    <rect width="168" height="38" rx="19" fill="#052e16" stroke="#16a34a" stroke-width="1.5"/>
+    <circle cx="22" cy="19" r="6" fill="#22c55e"/>
+    <text x="38" y="24" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="600" fill="#86efac">✓ SRI Compliance</text>
+    <!-- Cloud -->
+    <rect x="180" width="148" height="38" rx="19" fill="#1e3a8a" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="198" y="24" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="600" fill="#93c5fd">☁ 100% en la nube</text>
+    <!-- Free -->
+    <rect x="340" width="148" height="38" rx="19" fill="#451a03" stroke="#f59e0b" stroke-width="1.5"/>
+    <text x="358" y="24" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="600" fill="#fcd34d">★ Prueba gratis</text>
+  </g>
+
+  <!-- Right side card -->
+  <rect x="720" y="70" width="400" height="490" rx="20" fill="#0d1a3a" stroke="#1d39a0" stroke-width="1.5"/>
+  <rect x="720" y="70" width="400" height="52" rx="20" fill="#071347"/>
+  <rect x="720" y="102" width="400" height="20" fill="#071347"/>
+  <!-- Dots -->
+  <circle cx="749" cy="96" r="6" fill="#ef4444" opacity="0.8"/>
+  <circle cx="769" cy="96" r="6" fill="#f59e0b" opacity="0.8"/>
+  <circle cx="789" cy="96" r="6" fill="#22c55e" opacity="0.8"/>
+  <!-- URL bar -->
+  <rect x="808" y="83" width="290" height="26" rx="5" fill="#040b22" stroke="#1d39a0" stroke-width="1"/>
+  <text x="822" y="100" font-family="Inter, Arial, sans-serif" font-size="11" fill="#475569">prueba.contriap.com</text>
+
+  <!-- KPIs inside card -->
+  <rect x="740" y="142" width="116" height="62" rx="10" fill="#071347" stroke="#1d39a0" stroke-width="1"/>
+  <text x="752" y="162" font-family="Inter, Arial, sans-serif" font-size="10" fill="#64748b">Ventas hoy</text>
+  <text x="752" y="182" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#ffffff">$3,240</text>
+  <text x="752" y="196" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#22c55e">↑ 12%</text>
+
+  <rect x="868" y="142" width="116" height="62" rx="10" fill="#071347" stroke="#1d39a0" stroke-width="1"/>
+  <text x="880" y="162" font-family="Inter, Arial, sans-serif" font-size="10" fill="#64748b">Facturas</text>
+  <text x="880" y="182" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#ffffff">47</text>
+  <text x="880" y="196" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#60a5fa">Hoy</text>
+
+  <rect x="996" y="142" width="104" height="62" rx="10" fill="#071347" stroke="#1d39a0" stroke-width="1"/>
+  <text x="1008" y="162" font-family="Inter, Arial, sans-serif" font-size="10" fill="#64748b">Por cobrar</text>
+  <text x="1008" y="182" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#ffffff">$8,120</text>
+  <text x="1008" y="196" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#f59e0b">3 pend.</text>
+
+  <!-- Chart bars -->
+  <g transform="translate(740, 220)">
+    <text x="0" y="14" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#94a3b8">Ventas 7 días</text>
+    <rect x="0"   y="110" width="44" height="60"  rx="4" fill="#1e3a8a" opacity="0.8"/>
+    <rect x="52"  y="90"  width="44" height="80"  rx="4" fill="#1e3a8a" opacity="0.8"/>
+    <rect x="104" y="100" width="44" height="70"  rx="4" fill="#1e3a8a" opacity="0.8"/>
+    <rect x="156" y="70"  width="44" height="100" rx="4" fill="#1d4ed8" opacity="0.8"/>
+    <rect x="208" y="80"  width="44" height="90"  rx="4" fill="#1e3a8a" opacity="0.8"/>
+    <rect x="260" y="50"  width="44" height="120" rx="4" fill="#2563eb"/>
+    <rect x="312" y="30"  width="44" height="140" rx="4" fill="#3b82f6"/>
+  </g>
+
+  <!-- SRI authorized badge -->
+  <rect x="734" y="430" width="372" height="52" rx="12" fill="#052e16" stroke="#16a34a" stroke-width="1.5"/>
+  <circle cx="760" cy="456" r="12" fill="#16a34a"/>
+  <text x="756" y="461" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="white">✓</text>
+  <text x="784" y="453" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#86efac">Conectado al SRI · Autorización en tiempo real</text>
+
+  <!-- Modules list (small) -->
+  <text x="740" y="514" font-family="Inter, Arial, sans-serif" font-size="11" fill="#475569">Ventas · Compras · Inventario · Contabilidad · Caja · RRHH</text>
+
+  <!-- Bottom URL -->
+  <text x="85" y="540" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#1d39a0">contriap.com</text>
+
+  <!-- CTA button -->
+  <rect x="85" y="555" width="210" height="44" rx="12" fill="#2563eb"/>
+  <text x="190" y="582" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="white" text-anchor="middle">Prueba Gratis →</text>
+</svg>

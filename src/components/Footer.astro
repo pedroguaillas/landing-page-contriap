@@ -1,0 +1,87 @@
+---
+const currentYear = new Date().getFullYear();
+
+const links = [
+  {
+    heading: 'Módulos',
+    items: [
+      { label: 'Facturación', href: '#modulos' },
+      { label: 'Ventas',      href: '#modulos' },
+      { label: 'Compras',     href: '#modulos' },
+      { label: 'Inventario',  href: '#modulos' },
+      { label: 'Contabilidad',href: '#modulos' },
+      { label: 'RRHH',        href: '#modulos' },
+    ],
+  },
+  {
+    heading: 'Producto',
+    items: [
+      { label: 'Cómo funciona', href: '#como-funciona' },
+      { label: 'Cumplimiento SRI', href: '#sri' },
+      { label: 'Solicitar Demo', href: 'https://wa.me/593959649714?text=Hola%2C%20me%20interesa%20una%20demo%20de%20CONTRI%20APP%20%F0%9F%91%8B' },
+    ],
+  },
+  {
+    heading: 'Legal',
+    items: [
+      { label: 'Términos de uso',    href: '#' },
+      { label: 'Política de privacidad', href: '#' },
+    ],
+  },
+];
+---
+
+<footer class="bg-navy-950 dark:bg-black/40 border-t border-navy-900 dark:border-navy-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8">
+      <!-- Brand col -->
+      <div class="lg:col-span-2 space-y-4">
+        <a href="/" class="flex items-center gap-2.5">
+          <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8">
+            <polygon points="18,3 33,11 33,25 18,33 3,25 3,11" stroke="#60a5fa" stroke-width="1.8" fill="none"/>
+            <polygon points="18,3 26,15 18,19 10,15" stroke="#60a5fa" stroke-width="1.8" fill="none"/>
+            <line x1="18" y1="19" x2="18" y2="33" stroke="#60a5fa" stroke-width="1.8"/>
+            <line x1="3" y1="11" x2="10" y2="15" stroke="#60a5fa" stroke-width="1.8"/>
+            <line x1="33" y1="11" x2="26" y2="15" stroke="#60a5fa" stroke-width="1.8"/>
+            <circle cx="18" cy="18" r="3.5" fill="#fbbf24"/>
+          </svg>
+          <span class="text-base font-extrabold text-white tracking-tight">
+            CONTRI <span class="text-blue-400">APP</span>
+          </span>
+        </a>
+        <p class="text-sm text-slate-400 leading-relaxed max-w-xs">
+          El sistema ERP en la nube diseñado para empresas ecuatorianas. Facturación electrónica SRI, contabilidad, inventario y más — todo en uno.
+        </p>
+        <div class="flex items-center gap-2 text-xs text-green-400 font-semibold">
+          <div class="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></div>
+          Sistema operativo · SRI conectado
+        </div>
+      </div>
+
+      <!-- Link columns -->
+      {links.map(col => (
+        <div>
+          <p class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-4">{col.heading}</p>
+          <ul class="space-y-2.5">
+            {col.items.map(({ label, href }) => (
+              <li>
+                <a href={href} class="text-sm text-slate-400 hover:text-white transition-colors font-medium">{label}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="mt-12 pt-8 border-t border-navy-900 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-xs text-slate-500">
+        © {currentYear} CONTRI APP. Todos los derechos reservados.
+      </p>
+      <p class="text-xs text-slate-600">
+        contriap.com · Ecuador 🇪🇨
+      </p>
+    </div>
+  </div>
+</footer>

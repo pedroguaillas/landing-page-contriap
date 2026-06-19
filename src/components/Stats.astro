@@ -1,0 +1,41 @@
+---
+const stats = [
+    {
+        value: "20+",
+        label: "Módulos integrados",
+        icon: "M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z",
+    },
+    {
+        value: "100%",
+        label: "Compatible con SRI",
+        icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z",
+    },
+    { value: "24/7", label: "Disponibilidad garantizada", icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" },
+];
+---
+
+<section class="bg-navy-900 dark:bg-navy-950 py-14 sm:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-0 lg:divide-x lg:divide-navy-700">
+            {
+                stats.map(({ value, label, icon }) => (
+                    <div class="flex flex-col items-center text-center lg:px-8">
+                        <div class="w-11 h-11 rounded-xl bg-blue-600/20 flex items-center justify-center mb-3">
+                            <svg
+                                class="w-5 h-5 text-blue-400"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                viewBox="0 0 24 24"
+                            >
+                                <path stroke-linecap="round" stroke-linejoin="round" d={icon} />
+                            </svg>
+                        </div>
+                        <p class="text-3xl sm:text-4xl font-extrabold text-white">{value}</p>
+                        <p class="text-sm text-slate-400 mt-1 font-medium">{label}</p>
+                    </div>
+                ))
+            }
+        </div>
+    </div>
+</section>

@@ -1,0 +1,88 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  ogImage?: string;
+}
+
+const {
+  title = 'CONTRI APP — Facturación Electrónica y ERP para Ecuador',
+  description = 'Sistema ERP completo: facturas electrónicas SRI, contabilidad, inventario, ventas y RRHH. Cumplimiento SRI garantizado. Prueba gratis hoy.',
+  ogImage = 'https://contriap.com/og-image.png',
+} = Astro.props;
+
+const canonicalURL = 'https://contriap.com';
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <!-- Primary SEO -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content="facturación electrónica ecuador, SRI, ERP ecuador, sistema contable, CONTRI APP, inventario, contabilidad, RRHH, factura electrónica" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Open Graph — WhatsApp / redes -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:alt" content="CONTRI APP — ERP para Ecuador" />
+    <meta property="og:locale" content="es_EC" />
+    <meta property="og:site_name" content="CONTRI APP" />
+
+    <!-- Twitter card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <!-- Schema.org -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "CONTRI APP",
+      "description": description,
+      "url": canonicalURL,
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web Browser",
+      "inLanguage": "es-EC",
+      "offers": { "@type": "Offer", "availability": "https://schema.org/InStock", "url": "https://wa.me/593959649714" },
+      "provider": { "@type": "Organization", "name": "CONTRI APP", "url": canonicalURL }
+    })} />
+
+    <!-- Dark mode init: evita flash -->
+    <script is:inline>
+      (function(){
+        try {
+          var t = localStorage.getItem('theme');
+          var d = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (t === 'dark' || (!t && d)) document.documentElement.classList.add('dark');
+        } catch(e) {}
+      })();
+    </script>
+
+    <meta name="generator" content={Astro.generator} />
+  </head>
+  <body class="bg-white dark:bg-navy-950 text-slate-900 dark:text-white font-sans transition-colors duration-300">
+    <slot />
+  </body>
+</html>

@@ -1,0 +1,49 @@
+---
+---
+
+<section class="py-20 sm:py-28 bg-gradient-to-br from-navy-900 via-blue-900 to-navy-950 relative overflow-hidden">
+  <!-- Decorative circles -->
+  <div class="absolute -top-20 -left-20 w-80 h-80 bg-blue-600 rounded-full filter blur-3xl opacity-20 pointer-events-none"></div>
+  <div class="absolute -bottom-20 -right-20 w-96 h-96 bg-gold-400 rounded-full filter blur-3xl opacity-10 pointer-events-none"></div>
+
+  <!-- Grid pattern -->
+  <div class="absolute inset-0 opacity-[0.04]"
+    style="background-image: radial-gradient(circle, #fff 1px, transparent 1px); background-size: 28px 28px;">
+  </div>
+
+  <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <div class="inline-flex items-center gap-2 bg-white/10 text-white text-sm font-semibold px-4 py-1.5 rounded-full border border-white/20 mb-8">
+      <span class="w-2 h-2 bg-gold-400 rounded-full animate-pulse"></span>
+      Sin tarjeta de crédito · Sin compromisos
+    </div>
+
+    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-6 leading-tight">
+      ¿Listo para transformar<br />la gestión de tu empresa?
+    </h2>
+
+    <p class="text-lg sm:text-xl text-blue-200 mb-10 max-w-2xl mx-auto leading-relaxed">
+      Únete a las empresas ecuatorianas que ya facturan, contabilizan y crecen con CONTRI APP. Solicita una demo personalizada hoy.
+    </p>
+
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="https://wa.me/593959649714?text=Hola%2C%20me%20interesa%20una%20demo%20de%20CONTRI%20APP%20%F0%9F%91%8B" target="_blank" rel="noopener noreferrer"
+        class="inline-flex items-center justify-center gap-2 bg-gold-400 hover:bg-gold-500 text-navy-900 font-extrabold px-10 py-4 rounded-xl transition-all hover:shadow-2xl hover:shadow-gold-400/30 hover:-translate-y-0.5 text-lg">
+        Solicitar Demo por WhatsApp
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+        </svg>
+      </a>
+      <a href="#modulos"
+        class="inline-flex items-center justify-center gap-2 border-2 border-white/30 hover:border-white/60 text-white font-semibold px-10 py-4 rounded-xl transition-all text-lg">
+        Ver todos los módulos
+      </a>
+    </div>
+
+    <!-- Trust row -->
+    <div class="flex flex-wrap justify-center gap-x-8 gap-y-2 mt-10">
+      {['✓ SRI Ecuador', '✓ 100% en la nube', '✓ Soporte en español', '✓ Respuesta inmediata'].map(item => (
+        <span class="text-sm text-blue-300 font-medium">{item}</span>
+      ))}
+    </div>
+  </div>
+</section>
