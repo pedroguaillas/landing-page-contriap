@@ -8,7 +8,7 @@ interface Props {
 }
 
 const {
-  title = 'CONTRI APP — Facturación Electrónica y ERP para Ecuador',
+  title = 'ContriAP — Facturación Electrónica y ERP para Ecuador',
   description = 'Sistema ERP completo: facturas electrónicas SRI, contabilidad, inventario, ventas y RRHH. Cumplimiento SRI garantizado. Prueba gratis hoy.',
   ogImage = 'https://contriap.com/og-image.png',
 } = Astro.props;
@@ -32,7 +32,7 @@ const canonicalURL = 'https://contriap.com';
     <!-- Primary SEO -->
     <title>{title}</title>
     <meta name="description" content={description} />
-    <meta name="keywords" content="facturación electrónica ecuador, SRI, ERP ecuador, sistema contable, CONTRI APP, inventario, contabilidad, RRHH, factura electrónica" />
+    <meta name="keywords" content="facturación electrónica ecuador, SRI, ERP ecuador, sistema contable, ContriAP, inventario, contabilidad, RRHH, factura electrónica" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href={canonicalURL} />
 
@@ -45,9 +45,9 @@ const canonicalURL = 'https://contriap.com';
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:alt" content="CONTRI APP — ERP para Ecuador" />
+    <meta property="og:image:alt" content="ContriAP — ERP para Ecuador" />
     <meta property="og:locale" content="es_EC" />
-    <meta property="og:site_name" content="CONTRI APP" />
+    <meta property="og:site_name" content="ContriAP" />
 
     <!-- Twitter card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -59,14 +59,14 @@ const canonicalURL = 'https://contriap.com';
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
-      "name": "CONTRI APP",
+      "name": "ContriAP",
       "description": description,
       "url": canonicalURL,
       "applicationCategory": "BusinessApplication",
       "operatingSystem": "Web Browser",
       "inLanguage": "es-EC",
       "offers": { "@type": "Offer", "availability": "https://schema.org/InStock", "url": "https://wa.me/593959649714" },
-      "provider": { "@type": "Organization", "name": "CONTRI APP", "url": canonicalURL }
+      "provider": { "@type": "Organization", "name": "ContriAP", "url": canonicalURL }
     })} />
 
     <!-- Dark mode init: evita flash -->
