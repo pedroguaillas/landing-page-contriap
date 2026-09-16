@@ -1,5 +1,4 @@
 ---
-import LogoIcon from "./LogoIcon.astro";
 const currentYear = new Date().getFullYear();
 
 const links = [
@@ -38,8 +37,8 @@ const links = [
     <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8">
       <!-- Brand col -->
       <div class="lg:col-span-2 space-y-4">
-        <a href="/" class="flex items-center gap-2.5">
-          <LogoIcon />
+        <a href="/" class="flex items-center gap-2">
+          <img src="/logo-navbar.png" alt="ContriAP" class="h-8 w-auto" />
           <span class="text-base font-extrabold text-white tracking-tight">
             Contri<span class="text-blue-400">AP</span>
           </span>
